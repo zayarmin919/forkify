@@ -123,6 +123,11 @@ const controlAddRecive = async function (newRecipe) {
     addReciveView.renderError(err.message);
   }
 };
+
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipe);
@@ -131,7 +136,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addReciveView.addHandlerUpload(controlAddRecive);
-  console.log('Hello');
+  newFeature();
 };
 
 init();
