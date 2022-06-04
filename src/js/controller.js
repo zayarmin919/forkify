@@ -10,9 +10,6 @@ import addReciveView from './views/addReciveView';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
 const controlRecipe = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -124,10 +121,6 @@ const controlAddRecive = async function (newRecipe) {
   }
 };
 
-const newFeature = function () {
-  console.log('Welcome to the application');
-};
-
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipe);
@@ -136,7 +129,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addReciveView.addHandlerUpload(controlAddRecive);
-  newFeature();
 };
 
 init();
